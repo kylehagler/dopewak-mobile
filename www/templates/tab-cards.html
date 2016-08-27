@@ -1,0 +1,24 @@
+<ion-view view-title="Dopewak">
+  <ion-content class="has-footer" scroll="false">
+    <div class="user-info">
+        <img ng-src="{{currentUser.photoURL}}">
+        <h1>{{currentUser.displayName}}</h1>
+        <span class="dopes"><span class="number">{{currentUser.dopes}}</span> Dope<span ng-if="currentUser.dopes >= 2">s</span></span>
+        <span class="wacks"><span class="number">{{currentUser.wacks}}</span> Wack<span ng-if="currentUser.wacks >= 2">s</span></span>
+    </div>
+
+    <td-cards>
+      <td-card ng-repeat="card in cards" on-swipe-left="cardSwipedLeft($index, card.$id)" on-swipe-right="cardSwipedRight($index, card.$id)">
+        {{card.title}}
+      </td-card>
+    </td-cards>
+   
+  </ion-content>
+
+	<ion-footer-bar align-title="right">
+	  <div class="buttons">
+	    <button class="button button-dark button-outline" ng-click="addCard()">Add Card</button>
+	  </div>
+	</ion-footer-bar>
+
+</ion-view>

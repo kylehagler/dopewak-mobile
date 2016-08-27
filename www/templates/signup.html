@@ -1,0 +1,19 @@
+<ion-view view-title="Dopewak">
+  <ion-content class="padding">
+    <h2>Signup</h2>
+      
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Email" ng-model="creds.email">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="Password" ng-model="creds.password">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="Confirm Password" ng-model="creds.confirmPassword">
+      </label>
+    </div>
+
+    <button class="button button-block button-positive activated" ng-click="signup()">Create Account</button>
+  </ion-content>
+</ion-view>

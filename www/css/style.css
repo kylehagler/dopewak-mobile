@@ -1,0 +1,86 @@
+.tab-item {
+	font-family: "Montserrat", sans-serif !important;
+}
+
+.scroll-content {
+	background: #eee;
+}
+
+td-card {
+	text-align: center;
+	height: 150px;
+	display: flex;
+	align-items: center; 
+	margin-top: 12px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	border: none;
+	border-radius: 0;
+}
+
+.td-card {
+	width: 100%;
+}
+
+.user-info {
+	padding-bottom: 25px;
+	background: #333;
+	padding: 20px;
+}
+
+.user-info img {
+	border-radius: 50%;
+	float: left;
+	margin-right: 12px;
+	width: 50px;
+}
+
+.user-info h1 {
+	font-size: 16px;
+	margin: 0 0 10px;
+	color: #fff;
+}
+
+
+.user-info span.dopes {
+	background: #EC407A;
+	color: #fff;
+	padding: 6px 7px;
+	border-radius: 2px;
+	font-size: 12px;
+}
+
+.user-info span.wacks {
+	background: #222;
+	color: #fff;
+	padding: 7px;
+	border-radius: 2px;
+	font-size: 12px;
+}
+
+.user-info span.number {
+	background: rgba(255,255,255,0.9);
+    color: #333;
+    padding: 4px;
+    margin-right: 3px;
+    border-radius: 50%;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    font-weight: bold;
+    line-height: 0.65;
+    text-align: center;
+}
+
+.backdrop {
+	background-color: #EC407A;
+}
+
+.loading-container .loading {
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 20px 22px 18px;
+    border-radius: 0;
+}
+
+.spinner-ios, .spinner-ios-small {
+    stroke: #eee;
+}

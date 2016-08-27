@@ -1,0 +1,26 @@
+<ion-view view-title="Dopewak">
+  <ion-content class="padding">
+    <!--  -->
+
+    <div class="list">
+
+      <div class="item item-divider">
+        Dope
+      </div>
+
+      <a class="item" href="#" ng-repeat="leader in leaderboard | orderBy: '-score' | limitTo: 10">
+        {{leader.title}}
+      </a>
+
+      <div class="item item-divider">
+        Wack
+      </div>
+
+      <a class="item" href="#" ng-repeat="leader in leaderboard | orderBy: 'score' | limitTo: 10">
+        {{leader.title}}
+      </a>
+
+    </div>
+  
+  </ion-content>
+</ion-view>
