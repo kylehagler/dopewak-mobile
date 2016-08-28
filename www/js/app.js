@@ -69,6 +69,16 @@ angular.module('starter', ['ionic', 'firebase', 'ionic.contrib.ui.tinderCards', 
     }
   })
 
+  .state('tab.card-detail', {
+    url: '/cards/:card',
+    views: {
+      'tab-cards': {
+        templateUrl: 'templates/card-detail.html',
+        controller: 'CardDetailCtrl'
+      }
+    }
+  })
+
   .state('tab.leaderboard', {
     url: '/leaderboard',
     views: {

@@ -1,4 +1,4 @@
-<ion-view view-title="Dopewak">
+<ion-view view-title="Dope<span>Wak</span>">
   <ion-content class="has-footer" scroll="false">
     <div class="user-info">
         <img ng-src="{{currentUser.photoURL}}">
@@ -8,11 +8,10 @@
     </div>
 
     <td-cards>
-      <td-card ng-repeat="card in cards" on-swipe-left="cardSwipedLeft($index, card.$id)" on-swipe-right="cardSwipedRight($index, card.$id)">
+      <a href="#/tab/cards/{{card.$id}}" ng-repeat="card in cards"><td-card on-swipe-left="cardSwipedLeft($index, card.$id)" on-swipe-right="cardSwipedRight($index, card.$id)">
         {{card.title}}
-      </td-card>
+      </td-card></a>
     </td-cards>
-   
   </ion-content>
 
 	<ion-footer-bar align-title="right">
@@ -20,5 +19,4 @@
 	    <button class="button button-dark button-outline" ng-click="addCard()">Add Card</button>
 	  </div>
 	</ion-footer-bar>
-
 </ion-view>

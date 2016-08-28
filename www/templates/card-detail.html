@@ -1,0 +1,21 @@
+<ion-view view-title="Dope<span>Wak</span">
+  <ion-content class="padding" delegate-handle="show-page">
+    <p>
+      {{card.title}}
+
+      <button ng-click="sendMessage()">Send Message</button>
+    </p>
+
+    <p ng-repeat="message in messages">{{message.text}}</p>
+  </ion-content>
+
+  <ion-footer-bar keyboard-attach class="bar-positive item-input-inset">
+	  <label class="item-input-wrapper">
+	  	<input type="text" placeholder="Type your message" ng-model="messageText">
+	  </label>
+	  <button class="button button-dark button-outline" ng-click="sendMessage()">Send</button>
+  </ion-footer-bar>
+
+</ion-view>
+
+

@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Monoton';
+
 .tab-item {
 	font-family: "Montserrat", sans-serif !important;
 }
@@ -83,4 +85,17 @@ td-card {
 
 .spinner-ios, .spinner-ios-small {
     stroke: #eee;
+}
+
+.bar.bar-stable .title {
+	font-family: 'Monoton', cursive;
+	color: #EC407A;
+}
+
+.bar.bar-stable .title span {
+	color: #222;
+}
+
+.button.button-balanced {
+	font-size: 12px;
 }

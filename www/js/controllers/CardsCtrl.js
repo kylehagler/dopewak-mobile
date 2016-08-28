@@ -64,7 +64,11 @@ angular.module('starter')
 
     });
 
-  }
+  };
+
+  // $scope.goToCard = function(e) {
+  //   console.log(e);
+  // }
 
   $scope.cardSwipedLeft = function(index, id) {
     $scope.cards.splice(index, 1);
