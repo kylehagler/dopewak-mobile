@@ -1,7 +1,6 @@
 angular.module('starter')
 
 .controller('CardDetailCtrl', function($scope, $stateParams, $firebaseObject, $firebaseArray, $timeout, $ionicLoading, $ionicScrollDelegate) {
-  $ionicLoading.show();
 
   firebase.auth().onAuthStateChanged(function(currentUser) {
 
@@ -46,6 +45,8 @@ angular.module('starter')
         cid: $stateParams.card,
         timestamp: new Date().getTime()
       });
+
+      $scope.messageText = '';
 
       $ionicScrollDelegate.$getByHandle('show-page').scrollBottom(true);
     }

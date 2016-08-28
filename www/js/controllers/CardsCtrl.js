@@ -5,8 +5,6 @@ angular.module('starter')
   $ionicLoading.show();
 
   firebase.auth().onAuthStateChanged(function(currentUser) {
-    console.log(currentUser);
-
     if(currentUser) {
       $scope.currentUser = currentUser;
       $scope.init();      
@@ -16,7 +14,6 @@ angular.module('starter')
   });
 
   $scope.init = function() {
-
     var userRef = firebase.database().ref('/users');
     var userQuery = userRef.orderByChild('uid').equalTo($scope.currentUser.uid);
     var userArray = $firebaseArray(userQuery);

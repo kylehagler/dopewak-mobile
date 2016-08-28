@@ -85,7 +85,7 @@ angular.module('starter', ['ionic', 'firebase', 'ionic.contrib.ui.tinderCards', 
       'tab-leaderboard': {
         templateUrl: 'templates/tab-leaderboard.html',
         controller: 'LeaderboardCtrl'
-      }
+      },
     }
   })
 

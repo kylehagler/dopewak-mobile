@@ -60,17 +60,7 @@ td-card {
 }
 
 .user-info span.number {
-	background: rgba(255,255,255,0.9);
-    color: #333;
-    padding: 4px;
-    margin-right: 3px;
-    border-radius: 50%;
-    display: inline-block;
-    height: 16px;
-    width: 16px;
     font-weight: bold;
-    line-height: 0.65;
-    text-align: center;
 }
 
 .backdrop {
@@ -96,6 +86,15 @@ td-card {
 	color: #222;
 }
 
-.button.button-balanced {
-	font-size: 12px;
+.button {
+	font-size: 13px !important;
+}
+
+.button i {
+	margin-right: 5px;
+}
+
+button.list-button {
+	margin-top: 1px;
+	padding-right: 7px;
 }

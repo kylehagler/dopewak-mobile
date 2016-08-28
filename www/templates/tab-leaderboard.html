@@ -1,21 +1,34 @@
 <ion-view view-title="Dope<span>Wak</span>">
   <ion-content class="padding">
-    <div class="list">
-      <div class="item item-divider">
-        Dope
+    <div class="row">
+      <div class="col"><button style="width: 100%;" id="dope-btn" ng-class="{'button-outline' : activeList === 'wack'}" class="toggle-button dope-button button button-positive" ng-click="toggleList()">What's Dope</button></div>
+      <div class="col"><button style="width: 100%;" id="wack-btn" ng-class="{'button-outline' : activeList === 'dope'}" class="toggle-button wack-button button button-dark" ng-click="toggleList()">What's Wack</button></div>
+    </div>
+
+    <div id="dopelist" class="list" ng-if="activeList === 'dope'">
+      <!-- <div class="item item-divider">
+        What's Dope
+      </div> -->
+
+      <div class="item item-button-right" href="#" ng-repeat="leader in leaderboard | orderBy: '-score' | limitTo: 10">
+        {{$index + 1}}. {{leader.title}}
+        <button class="button button-stable list-button" ng-click="goToCard($event)" data-cardid="{{leader.$id}}">
+          <i class="icon ion-ios-chatbubble-outline"></i>
+        </button>
       </div>
+    </div>
 
-      <a class="item" href="#" ng-repeat="leader in leaderboard | orderBy: '-score' | limitTo: 10">
-        {{leader.title}}
-      </a>
+    <div id="wacklist" class="list" ng-if="activeList === 'wack'">
+      <!-- <div class="item item-divider">
+        What's Wack
+      </div> -->
 
-      <div class="item item-divider">
-        Wack
+      <div class="item item-button-right" href="#" ng-repeat="leader in leaderboard | orderBy: 'score' | limitTo: 10">
+        {{$index + 1}}. {{leader.title}}
+        <button class="button button-stable list-button">
+          <i class="icon ion-ios-chatbubble-outline"></i>
+        </button>
       </div>
-
-      <a class="item" href="#" ng-repeat="leader in leaderboard | orderBy: 'score' | limitTo: 10">
-        {{leader.title}}
-      </a>
     </div>
   </ion-content>
 </ion-view>
